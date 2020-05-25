@@ -32,7 +32,7 @@ Features were also added to count the number of words according to their Part-of
 ### Word Embedding Features
 I also experimented a lot with features derived from word embeddings. Initially, I trained FastText and Word2Vec models from scratch on the corpus, and used a TF-IDF weighted average of the word vectors for each document to compile a document vector. 
 
-After finding that these results did not perform better than the base TF-IDF features, I also trained a Doc2Vec model from scratch on the corpus, and used both weighted and non-weighted averages of vectores to create a document vector. Unfortunately, these features also did not prove to be better than the base features, and lead to overfitting of the model.
+After finding that these results did not perform better than the base TF-IDF features, I also trained a Doc2Vec model from scratch on the corpus, and used both weighted and non-weighted averages of vectors to create a document vector. Unfortunately, these features also did not prove to be better than the base features, and lead to overfitting of the model.
 
 ## Dealing with Class Imbalance
 In this competition, there was a severe class imbalance in the number of positive labels vs negative labels. 
