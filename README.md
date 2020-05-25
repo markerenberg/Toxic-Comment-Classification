@@ -40,7 +40,7 @@ In this competition, there was a severe class imbalance in the number of positiv
 As such, Oversampling and Undersampling were used in the training phases of the final model.
 
 SMOTE (Synthetic Minority Over-sampling Technique) and RandomUnderSampler were both used from the imbalanced-learn library.
-The over-sampling ratio, under-sampling ratio, and k-Neighbors parameters were all estimated decided using Bayesian hyperparameter tuning.
+The over-sampling ratio, under-sampling ratio, and k-Neighbors parameters were all decided using Bayesian hyperparameter tuning.
 
 ## Model Selection
 The base model I used for this competition was Jeremy Howard's Naive-Bayes SVM Classifier: https://www.kaggle.com/jhoward/nb-svm-strong-linear-baseline. However since this model uses a log ratio of word counts for NaiveBayes, it proved incompatible with TF-IDF scores (which can be negative).
