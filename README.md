@@ -37,10 +37,20 @@ After finding that these results did not perform better than the base TF-IDF fea
 ## Dealing with Class Imbalance
 In this competition, there was a severe class imbalance in the number of positive labels vs negative labels. 
 ![](imbalance_plot.png)
+As such, Oversampling and Undersampling were used in the training phases of the final model.
 
+SMOTE (Synthetic Minority Over-sampling Technique) and RandomUnderSampler were both used from the imbalanced-learn library.
+The over-sampling ratio, under-sampling ratio, and k-Neighbors parameters were all estimated decided using Bayesian hyperparameter tuning.
 
 ## Model Selection
+The base model I used for this competition was Jeremy Howard's Naive-Bayes SVM Classifier: https://www.kaggle.com/jhoward/nb-svm-strong-linear-baseline. However since this model uses a log ratio of word counts for NaiveBayes, it proved incompatible with TF-IDF scores (which can be negative).
 
+My next model approach was to use Gradient Boosting Machines. I trained XGBoost and LightGBM models and evaluated them using 10-fold CV, and determined that LightGBM performed better and was less prone to overfitting.
 
+Another model I used in the training stage is the RandomForestClassifier from scikit-learn. This model performed well when combined with the oversampling and undersampling techniques.
+
+## Model Tuning
+Bayesian hyperparameter tuning was performed to decide the optimal hyperparameters for over/undersampling algorithms and classifiers. 
+This was implemented using the Hyperopt library, which uses a Tree-structured Parzen Estimator (TPE) approach.
 
 ## Model Performance
