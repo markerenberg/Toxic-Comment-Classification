@@ -36,6 +36,8 @@ After finding that these results did not perform better than the base TF-IDF fea
 
 ## Dealing with Class Imbalance
 In this competition, there was a severe class imbalance in the number of positive labels vs negative labels. 
+![](imbalance_plot.png)
+
 
 ## Model Selection
 
