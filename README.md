@@ -52,5 +52,3 @@ Another model I used in the training stage is the RandomForestClassifier from sc
 ## Model Tuning
 Bayesian hyperparameter tuning was performed to decide the optimal hyperparameters for over/undersampling algorithms and classifiers. 
 This was implemented using the Hyperopt library, which uses a Tree-structured Parzen Estimator (TPE) approach.
-
-## Model Performance
